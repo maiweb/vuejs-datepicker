@@ -9,9 +9,10 @@
         </i>
       </span>
     </span>
+	123
     <!-- Input -->
-    <the-mask
-      :type="inline ? 'hidden' : 'text'"
+    <input
+      :type="inline ? 'hidden' : 'date'"
       :class="computedInputClass"
       :name="name"
       :ref="refName"
@@ -26,7 +27,9 @@
       @click="showCalendar"
       @keyup="parseTypedDate"
       @blur="inputBlurred"
-      autocomplete="off">
+      autocomplete="off"
+	  v-mask="'##-##-####'"
+	  >
     <!-- Clear Button -->
     <span v-if="clearButton && selectedDate" class="vdp-datepicker__clear-button" :class="{'input-group-append' : bootstrapStyling}" @click="clearDate()">
       <span :class="{'input-group-text' : bootstrapStyling}">
