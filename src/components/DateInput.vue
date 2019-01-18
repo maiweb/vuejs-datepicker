@@ -10,7 +10,7 @@
       </span>
     </span>
     <!-- Input -->
-    <input
+    <the-mask
       :type="inline ? 'hidden' : 'text'"
       :class="computedInputClass"
       :name="name"
